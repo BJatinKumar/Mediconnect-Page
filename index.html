@@ -14,10 +14,9 @@
             <a href="https://mediconnect-health-simplified.streamlit.app/"><button>ChatBot</button></a>
             <button>Find Doctors</button>
             <button>How It Works</button>
-            <button class="sign-in-btn">Sign In</button>
+            <button class="sign-in-btn" onclick="openSignIn()">Sign In</button>
         </div>
     </nav>
-    
 
     <header class="hero">
         <h1>AI-Powered Healthcare at Your Fingertips</h1>
@@ -44,7 +43,25 @@
             </div>
             <a href="#" class="forgot">Forgot password?</a>
             <button class="sign-in-btn">Sign In</button>
-            <p>Don't have an account? <a href="#">Sign up</a></p>
+            <p>Don't have an account? <a href="#" onclick="openSignUp()">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signUpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignUp()">&times;</span>
+            <h2>Sign Up</h2>
+            <div class="toggle-buttons">
+                <button id="patientSignUpBtn" class="active" onclick="toggleSignUpUserType('patient')">Patient</button>
+                <button id="providerSignUpBtn" onclick="toggleSignUpUserType('provider')">Healthcare Provider</button>
+            </div>
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email Address">
+            <input type="password" placeholder="Create Password">
+            <input type="password" placeholder="Confirm Password">
+            <button class="sign-up-btn">Create Account</button>
+            <p>Already have an account? <a href="#" onclick="openSignIn()">Sign In</a></p>
         </div>
     </div>
 
